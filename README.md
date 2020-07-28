@@ -1,2 +1,2 @@
-# OnsenUI-Vue-PWA
-Customer log system based on OnsenUI+Vue+PWA
+# Cordova-OnsenUI-Vue
+Customer log system based on Cordova-OnsenUI-Vue
