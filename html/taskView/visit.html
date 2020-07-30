@@ -1,0 +1,61 @@
+<ons-page id='visit' style='background-color: white !important;'>
+    <div class='visit'>
+        <div class="left">
+            <ons-back-button class='visitLeft'></ons-back-button>
+            <span class='visitTitle'>日志回访</span>
+        </div>
+        <form id='visitForm'>
+            <div class="form-row">
+                <label for="visitClient"><span style='color:red'>* </span>客户名称</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="visitClient" disabled>
+                    <div class="input-group-prepend">
+                        <div id='visitClientIcon' class="input-group-text">
+                            <img src="icon/qc.png" width="20px" height="20px"> </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3" style="padding-right:5px ;">
+                    <label for="visitCsname">客服姓名</label>
+                    <input type="text" class="form-control" id="visitCsname">
+                </div>
+                <div class="form-group col-md-3" style="padding-left:5px ;">
+                    <label for="visitClientname">客户姓名</label>
+                    <input type="text" class="form-control" id="visitClientname">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3" style="padding-right:5px ;">
+                    <label for="visitClientphone">客户电话</label>
+                    <input type="text" class="form-control" id="visitClientphone">
+                </div>
+                <div class="form-group col-md-3" style="padding-left:5px ;">
+                    <label for="visitClientqq">客户QQ</label>
+                    <input type="text" class="form-control" id="visitClientqq">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3" style="padding-right:5px ;">
+                    <label for="visitClientphone"><span style='color:red'>* </span>开始时间</label>
+                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker5"
+                        data-toggle="datetimepicker" data-target="#datetimepicker5" />
+                </div>
+                <div class="form-group col-md-3" style="padding-left:5px ;">
+                    <label for="visitClientqq"><span style='color:red'>* </span>结束时间</label>
+                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker6"
+                        data-toggle="datetimepicker" data-target="#datetimepicker6" />
+                </div>
+            </div>
+        </form>
+
+
+        <div id='visitLine'>
+            <i></i>
+            <p>展开全部内容</p>
+        </div>
+    </div>
+</ons-page>

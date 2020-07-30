@@ -1,0 +1,47 @@
+/* index.html css */
+
+body {
+    font-family: sans-serif
+}
+
+.page__content {
+    background-color: white !important
+}
+
+.loginTitle {
+    position: absolute;
+    margin: 55px 0 0 45px;
+    z-index: 2;
+}
+
+.loginTitle h3 {
+    font-weight: 525;
+    font-size: 22px;
+    letter-spacing: 2.5px
+}
+
+.loginImg {
+    text-align: right;
+    margin: 20px 50px 0 0;
+    z-index: 1;
+}
+
+.loginInput {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 35px;
+}
+
+.loginInput ons-input {
+    width: 320px;
+    line-height: 10px;
+}
+
+.loginInput ons-button {
+    width: 320px;
+    margin-top: 30px;
+    background-color: #FFA101;
+}

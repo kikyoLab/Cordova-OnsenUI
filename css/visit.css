@@ -1,0 +1,94 @@
+/* visit.html css */
+
+body {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif
+}
+
+.page__content {
+    background-color: white !important
+}
+
+.left {
+    margin: 0 0 20px 0
+}
+
+.visitLeft {
+    margin-left: -10px;
+}
+
+.visitTitle {
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    padding-left: 100px;
+}
+
+.visit {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 35px;
+    font-weight: 525;
+    letter-spacing: 1px;
+}
+
+.visit ons-input {
+    width: 320px;
+    line-height: 10px;
+}
+
+#visitClient {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+}
+
+#visitClientIcon {
+    border-radius: 0 8px 8px 0;
+    background-color: e9ecef;
+    border-left: none;
+}
+
+#visitForm {
+    width: 360px;
+}
+
+#visitForm .form-group {
+    width: 180px;
+    padding: 0;
+}
+
+#visitForm .form-row {
+    max-width: 360px;
+}
+
+#visitLine {
+    position: relative;
+    height: 1.875rem;
+    line-height: 1.875rem;
+    margin: 2.47rem auto;
+    text-align: center;
+    margin-top: 0
+}
+
+#visitLine i {
+    display: block;
+    height: 1px;
+    background: #e1e1e1;
+    position: absolute;
+    top: 0.9rem;
+    width: 100%;
+}
+
+#visitLine p {
+    display: inline-block;
+    font-size: 0.75rem;
+    color: red;
+    background: white;
+    padding: 0 1.875rem;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    font-weight: 525;
+}
