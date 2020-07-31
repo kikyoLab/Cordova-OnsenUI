@@ -16,7 +16,13 @@ document.addEventListener('init', function (event) {
                     let uname = data.uname
                     let ustatus = data.status
                     console.log(`你好, ${uname}! 你的Key是${ukey} 今天已处理的问题数:${ustatus}`)
-                    document.querySelector('#myNavigator').pushPage('html/taskView/visit.html');
+                    document.querySelector('#myNavigator').pushPage('html/userIndex.html', {
+                        data: {
+                            uname: uname,
+                            ukey: ukey,
+                            ustatus: ustatus
+                        }
+                    });
                 } else {
                     loginFail.show()
                 }

@@ -1,4 +1,4 @@
-<ons-page id='visit' style='background-color: white !important;'>
+<ons-page id='visit'>
     <div class='visit'>
         <div class="left">
             <ons-back-button class='visitLeft'></ons-back-button>
@@ -38,24 +38,87 @@
                 </div>
             </div>
 
-            <div class="form-row">
-                <div class="form-group col-md-3" style="padding-right:5px ;">
-                    <label for="visitClientphone"><span style='color:red'>* </span>开始时间</label>
-                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker5"
-                        data-toggle="datetimepicker" data-target="#datetimepicker5" />
+            <div id='visitHideContent'>
+                <div class="form-row">
+                    <div class="form-group col-md-3" style="padding-right:5px ;">
+                        <label for="visitStart"><span style='color:red'>* </span>开始时间</label>
+                        <input type="text" class="form-control datetimepicker-input" id="datetimepickerStart"
+                            data-toggle="datetimepicker" data-target="#datetimepickerStart" />
+                    </div>
+                    <div class="form-group col-md-3" style="padding-left:5px ;">
+                        <label for="visitEnd"><span style='color:red'>* </span>结束时间</label>
+                        <input type="text" class="form-control datetimepicker-input" id="datetimepickerEnd"
+                            data-toggle="datetimepicker" data-target="#datetimepickerEnd" />
+                    </div>
                 </div>
-                <div class="form-group col-md-3" style="padding-left:5px ;">
-                    <label for="visitClientqq"><span style='color:red'>* </span>结束时间</label>
-                    <input type="text" class="form-control datetimepicker-input" id="datetimepicker6"
-                        data-toggle="datetimepicker" data-target="#datetimepicker6" />
+
+                <div class="form-row">
+                    <label for="visitProblemDetails"><span style='color:red'>* </span>问题详情</label>
+                    <div class="input-group mb-2">
+                        <div id='visitProblemDetails' contenteditable="true"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile" multiple>
+                        <label class="custom-file-label" for="customFile">上传附件（文件小于3M）</label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="visitProblemNotes"><span style='color:red'>* </span>问题备注</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="visitProblemNotes">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <label for="visitDealResult"><span style='color:red'>* </span>处理结果</label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="visitDealResult">
+                    </div>
                 </div>
             </div>
-        </form>
 
+        </form>
 
         <div id='visitLine'>
             <i></i>
             <p>展开全部内容</p>
         </div>
+
+        <div class="form-row">
+            <label for="visitContent">回访内容</label>
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="visitContent">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="visitRemarks">回访备注</label>
+            <div class="input-group mb-2">
+                <input type="text" class="form-control" id="visitRemarks">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <label for="visitProblemDeal">问题处理程度</label>
+            <select id="visitProblemDeal" class="form-control">
+                <option>已解决</option>
+                <option>未解决</option>
+            </select>
+        </div>
+
+        <div class="form-row" style='margin-top:15px'>
+            <label for="visitCsStatus">客服服务态度</label>
+            <select id="visitCsStatus" class="form-control">
+                <option>满意</option>
+                <option>一般</option>
+                <option>不满意</option>
+            </select>
+        </div>
+
+        <ons-button id='visitSave' modifier="large">保 存</ons-button>
     </div>
 </ons-page>

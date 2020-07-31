@@ -1,0 +1,29 @@
+#userIndexTitle {
+    text-align: center;
+    margin-right: 40px
+}
+
+#userIndexTitle1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#userIndexTitle2 {
+    text-align: center;
+}
+
+.featuresCard {
+    max-width: 360px;
+    width: 100%;
+}
+
+#newTask {
+    background-color: #FFA101;
+    color: white;
+    width: 140px;
+    margin: 20px 0 0 40px
+}
+
+#newTask img {
+    margin-left: 10px
+}

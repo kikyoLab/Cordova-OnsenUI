@@ -60,15 +60,16 @@ body {
 
 #visitForm .form-row {
     max-width: 360px;
+    margin-top: 10px
 }
 
 #visitLine {
     position: relative;
     height: 1.875rem;
     line-height: 1.875rem;
-    margin: 2.47rem auto;
+    margin: 2rem auto;
     text-align: center;
-    margin-top: 0
+    margin-top: 1rem
 }
 
 #visitLine i {
@@ -91,4 +92,30 @@ body {
     position: relative;
     z-index: 2;
     font-weight: 525;
+}
+
+#visitProblemDetails {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+#visitSave {
+    width: 360px;
+    margin-top: 30px;
+    background-color: #FFA101;
+    border-radius: 6px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+#visitHideContent {
+    display: none;
 }
