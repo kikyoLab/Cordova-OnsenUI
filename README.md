@@ -16,4 +16,5 @@ you need Build a environment for Java JDK and Android SDK versions.Then you can 
   
 ### Run the app
 <p>Now, copy the clone code to the www folder of your project.</p>
+
 `cordova run android`
