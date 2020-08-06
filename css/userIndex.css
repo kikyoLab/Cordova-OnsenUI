@@ -1,29 +1,90 @@
-#userIndexTitle {
-    text-align: center;
-    margin-right: 40px
-}
-
-#userIndexTitle1 {
-    text-align: center;
-    margin-top: 20px;
+.userIndexTitle {
+    display: inline-block;
+    text-align: left;
+    margin: 50px 0 0 0
 }
 
 #userIndexTitle2 {
-    text-align: center;
+    display: block;
+    text-align: left;
+    color: #bfbfbf;
+    margin: 0 0 0 25px
+}
+
+#titleProblemNum {
+    display: inline-block;
+    text-align: left;
+    margin-top: 20px;
+    color: #ffa64d;
+    font-size: 24px;
+    font-weight: 625;
+    margin: 0 5px 0 25px;
+}
+
+#titleProblemDate {
+    display: inline-block;
+    text-align: left;
+    color: #ffdab3;
+    font-size: 16px;
+    font-weight: 525;
 }
 
 .featuresCard {
-    max-width: 360px;
+    max-width: 400px;
     width: 100%;
 }
 
-#newTask {
-    background-color: #FFA101;
-    color: white;
-    width: 140px;
-    margin: 20px 0 0 40px
+.newTask {
+    display: inline-block;
+    background-color: #f2f2f2;
+    width: 160px;
+    margin: 25px 0 0 25px
 }
 
 #newTask img {
-    margin-left: 10px
+    margin: 0
+}
+
+.userIndexTitle {
+    display: block;
+    text-align: left;
+    font-weight: 625;
+    font-size: 22px;
+    padding: 25px;
+}
+
+.titleLeft {
+    width: 80%;
+    display: inline-block;
+}
+
+#taskTotal {
+    display: lnline-block;
+}
+
+.featuresTitle {
+    display: block;
+    text-align: left;
+    font-weight: 625;
+    font-size: 20px;
+    padding: 25px;
+    margin: 10px 0 -10px 0
+}
+
+.cardText1 {
+    margin: 15px 0 5px 0;
+    color: black;
+    font-size: 16px;
+    font-weight: 625;
+    letter-spacing: 1.5px
+}
+
+.cardText2 {
+    color: #bfbfbf;
+    font-size: 13px;
+    letter-spacing: 1px
+}
+
+#setting {
+    margin-bottom: 40px;
 }

@@ -8,8 +8,13 @@ body {
     background-color: white !important
 }
 
+.loginLogo {
+    margin-top: 50px
+}
+
 .loginTitle {
     position: absolute;
+    text-align: left;
     margin: 55px 0 0 45px;
     z-index: 2;
 }
@@ -32,7 +37,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 .loginInput ons-input {

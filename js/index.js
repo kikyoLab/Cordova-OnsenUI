@@ -1,6 +1,7 @@
 document.addEventListener('init', function (event) {
     let login = document.getElementById('login')
     let loginFail = document.getElementById('login-fail-alert');
+    let close = document.getElementById('close')
     login.onclick = function () {
         let username = $("#user").val()
         let userpwd = $("#pwd").val()
@@ -30,8 +31,7 @@ document.addEventListener('init', function (event) {
         })
     }
 
-    function appEnd () {
+    close.onclick = function () {
         loginFail.hide();
     }
-
 })

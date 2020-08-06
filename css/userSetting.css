@@ -1,0 +1,32 @@
+.settingLeft {
+    margin: 20px 0 0 30px
+}
+
+.pwdSetting {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}
+
+.pwdSetting ons-input {
+    width: 320px;
+    line-height: 10px;
+    letter-spacing: 1px;
+}
+
+.pwdSetting ons-button {
+    width: 320px;
+    margin-top: 30px;
+    background-color: #FFA101;
+    letter-spacing: 1px;
+}
+
+.settingTitle {
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    padding-left: 80px;
+}

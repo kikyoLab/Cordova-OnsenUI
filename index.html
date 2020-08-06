@@ -12,17 +12,19 @@
     <link rel='stylesheet' href="css/index.css">
     <link rel='stylesheet' href="css/visit.css">
     <link rel='stylesheet' href="css/userIndex.css">
+    <link rel="stylesheet" href="css/userSetting.css">
+    <link rel="stylesheet" href="css/feedBack.css">
 </head>
 
 <body>
 
     <!-- user login in html -->
-    <ons-navigator swipeable id="myNavigator" page="index.html"></ons-navigator>
+    <ons-navigator swipeable id="myNavigator" page="html/userIndex.html"></ons-navigator>
 
     <template id="index.html">
         <ons-page id='index'>
-            <div>
-                <span class='loginTitle' style="text-align: left;">
+            <div class='loginLogo'>
+                <span class='loginTitle'>
                     <h3>麦子易商</h3>
                     <h3>客户服务日志系统</h3>
                 </span>
@@ -51,7 +53,7 @@
                     登录接口出错,请联系开发人员
                 </div>
                 <div class="alert-dialog-footer">
-                    <ons-alert-dialog-button onclick="appEnd()">OK</ons-alert-dialog-button>
+                    <ons-alert-dialog-button id='close'>OK</ons-alert-dialog-button>
                 </div>
             </ons-alert-dialog>
         </ons-page>
@@ -67,6 +69,8 @@
     <script src='js/index.js'></script>
     <script src='js/visit.js'></script>
     <script src='js/userIndex.js'></script>
+    <script src='js/userSetting.js'></script>
+    <script src='js/feedBack.js'></script>
 </body>
 
 </html>

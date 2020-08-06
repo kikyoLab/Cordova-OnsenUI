@@ -1,0 +1,26 @@
+<ons-page id='userSetting'>
+    <div class="settingLeft">
+        <ons-back-button class='setLeft'></ons-back-button>
+        <span class='settingTitle'>修改密码</span>
+    </div>
+
+    <div class='pwdSetting'>
+        <div>
+            <p>原密码</p>
+            <ons-input id="originPwd" placeholder="请输入原密码" type="password" modifier="underbar"></ons-input>
+        </div>
+        <div style='margin-top:10px'>
+            <p>新密码</p>
+            <ons-input id="newPwd" placeholder="请输入六位数字、字母组合密码" type="password" modifier="underbar">
+            </ons-input>
+        </div>
+
+        <div style='margin-top:10px'>
+            <p>确认密码</p>
+            <ons-input id="reNewPwd" placeholder="请再次确认密码" type="password" modifier="underbar">
+            </ons-input>
+        </div>
+
+        <ons-button id='pwdSave' modifier="large">确 认</ons-button>
+    </div>
+</ons-page>
