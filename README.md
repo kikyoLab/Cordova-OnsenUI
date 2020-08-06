@@ -1,5 +1,6 @@
 # Cordova-OnsenUI
-Customer log system based on Cordova-OnsenUI for android app
+<p>Customer log system based on Cordova-OnsenUI for android app.</p>
+<p>You can find cordova's tutorial here <a href='https://cordova.apache.org/'>cordova</a></p>
 
 # Environment setup
 you need Build a environment for Java JDK and Android SDK versions.Then you can start from below
@@ -14,4 +15,5 @@ you need Build a environment for Java JDK and Android SDK versions.Then you can 
 `cordova platform add android`
   
 ### Run the app
-Now, copy the clone code to the www folder of your project and `cordova run android`
+<p>Now, copy the clone code to the www folder of your project.</p>
+`cordova run android`
