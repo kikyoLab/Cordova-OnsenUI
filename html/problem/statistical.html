@@ -1,0 +1,138 @@
+<ons-page id='statistical'>
+    <div class="FBStatisticalLeft">
+        <ons-back-button class='FBStatisticalLeft'></ons-back-button>
+        <span class='FBStatisticalTitle'>问题统计</span>
+    </div>
+
+    <div class='FBStatistical'>
+        <div>问题处理数据</div>
+        <span class='FBStatisticalDate'>
+            <select id="FBStatisticalDate">
+                <option selected>All</option>
+                <option>1月</option>
+                <option>2月</option>
+                <option>3月</option>
+                <option>4月</option>
+                <option>5月</option>
+                <option>6月</option>
+                <option>7月</option>
+                <option>8月</option>
+                <option>9月</option>
+                <option>10月</option>
+                <option>11月</option>
+                <option>12月</option>
+            </select>
+        </span>
+    </div>
+
+    <div id='PBpieChart'></div>
+
+    <div class='PieMain'>
+        <div>
+            <span id='PieAllPB' class='PieMainChild'></span>
+            <span>问题总数</span>
+        </div>
+        <span class='PieMainLine'>|</span>
+        <div>
+            <span id='PieSolvedPB' class='PieMainChild'></span>
+            <span>已解决</span>
+        </div>
+        <span class='PieMainLine'>|</span>
+        <div>
+            <span id='PieOtherPB' class='PieMainChild'></span>
+            <span>其他</span>
+        </div>
+    </div>
+
+    <div id='PBvisit'>
+        <div>问题回访占比</div>
+        <div id='PBvisitProgress'>
+            <div class='PBallProgress'></div>
+            <div class='PBvisitProgress'></div>
+        </div>
+        <div id='PBvisitContent'>
+            <div>
+                <div>
+                    <span>
+                        <span class='PBallStyle'></span>
+                        问题总数
+                    </span>
+                </div>
+                <span id='PBall' style='font-size:18px;font-weight: 525;color:black'></span>
+            </div>
+            <div>
+                <span>总占比</span>
+                <span id='PBvisitPercentage' style='font-size:18px;font-weight: 525;color:black'></span>
+            </div>
+            <div>
+                <div>
+                    <span>
+                        <span class='PBvisitStyle'></span>
+                        回访数
+                    </span>
+                </div>
+                <span id='PBvisitNum' style='font-size:18px;font-weight: 525;color:black'></span>
+            </div>
+        </div>
+    </div>
+
+    <div id='PBsovleDetails'>
+        <div>问题处理详情</div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th data-field="name">客服</th>
+                    <th data-field="pbNum">问题数</th>
+                    <th data-field="solveNum">已解决</th>
+                    <th data-field="other">其他</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <div id='CSvisitChart'>
+        <div>老客户回访</div>
+        <span class='CSStatisticalDate'>
+            <select id="CSStatisticalDate">
+                <option selected>All</option>
+                <option>1月</option>
+                <option>2月</option>
+                <option>3月</option>
+                <option>4月</option>
+                <option>5月</option>
+                <option>6月</option>
+                <option>7月</option>
+                <option>8月</option>
+                <option>9月</option>
+                <option>10月</option>
+                <option>11月</option>
+                <option>12月</option>
+            </select>
+        </span>
+    </div>
+
+    <div id='CSvisitHistogram'></div>
+
+    <div id='PBvisitChart'>
+        <div>问题回访</div>
+        <span class='PBStatisticalDate'>
+            <select id="PBStatisticalDate">
+                <option selected>All</option>
+                <option>1月</option>
+                <option>2月</option>
+                <option>3月</option>
+                <option>4月</option>
+                <option>5月</option>
+                <option>6月</option>
+                <option>7月</option>
+                <option>8月</option>
+                <option>9月</option>
+                <option>10月</option>
+                <option>11月</option>
+                <option>12月</option>
+            </select>
+        </span>
+    </div>
+
+    <div id='PBvisitHistogram'></div>
+</ons-page>

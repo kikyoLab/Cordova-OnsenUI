@@ -1,0 +1,122 @@
+.FBDetailsLeft {
+    margin: 10px 0 0 0
+}
+
+.FBDetailsTitle {
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    padding-left: 120px;
+}
+
+.detailesTitle {
+    padding: 10px;
+}
+
+.detailesImg {
+    display: inline-block;
+}
+
+.detailesImg img {
+    margin-top: -25px
+}
+
+.detailesImg p {
+    position: absolute;
+    font-size: 18px;
+    color: #414549;
+    margin: -40px 0 0 15px;
+}
+
+.detailesContent {
+    display: inline-block;
+}
+
+.detailesContent div {
+    margin-left: 10px
+}
+
+#csName {
+    font-size: 18px;
+    font-weight: 525;
+    letter-spacing: 1px
+}
+
+#problemId {
+    font-size: 14px;
+    color: #868c93
+}
+
+.splitLine {
+    width: 94%;
+    margin: 10px 10px 0 10px;
+    height: 2px;
+    border-top: solid #d7d8db 1px;
+}
+
+.detailesMain {
+    display: flex;
+    margin: 0;
+}
+
+.detailesRowLeft {
+    margin: 10px 0 0 10px;
+    width: 100px;
+}
+
+.detailesRowId {
+    margin-top: 15px;
+    color: #868c93
+}
+
+.detailesRowRight {
+    margin: 10px 0 0 10px;
+}
+
+.detailesRowContent {
+    margin-top: 15px;
+    width: 240px;
+    word-break: break-all;
+    letter-spacing: 0.5px;
+}
+
+#FBDetailsBack {
+    width: 90%;
+    min-height: 80px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin: 10px;
+}
+
+#FBDetailsBack:empty::before {
+    color: lightgrey;
+    content: attr(placeholder);
+    padding: 10px;
+}
+
+.FB-form-row label {
+    margin: 20px 0 0 10px
+}
+
+#FBSave {
+    width: 370px;
+    margin: 30px 10px 30px 10px;
+    background-color: #FFA101;
+    letter-spacing: 1px;
+}
+
+#FBSaveSet {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 36%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1px;
+}

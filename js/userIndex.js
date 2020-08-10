@@ -20,11 +20,11 @@ document.addEventListener('init', function (event) {
     }
 
     at.onclick = function () {
-        console.log('日志统计')
+        document.querySelector('#myNavigator').pushPage('html/problem/statistical.html')
     }
 
     pmfb.onclick = function () {
-        document.querySelector('#myNavigator').pushPage('html/feedBack.html')
+        document.querySelector('#myNavigator').pushPage('html/problem/feedBack.html')
     }
 
     se.onclick = function () {

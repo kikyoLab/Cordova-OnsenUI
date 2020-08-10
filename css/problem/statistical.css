@@ -1,0 +1,203 @@
+.FBStatisticaLeft {
+    margin: 10px 0 0 0
+}
+
+.FBStatisticalTitle {
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    padding-left: 120px;
+}
+
+#PBpieChart {
+    width: 400px;
+    height: 300px;
+}
+
+.FBStatistical {
+    display: flex;
+}
+
+.FBStatistical div {
+    flex: 3;
+    margin: 10px 0 0 20px;
+    font-size: 18px;
+    font-weight: 525;
+}
+
+.FBStatisticalDate {
+    flex: 1;
+    margin: 10px 0 20px 0;
+    border: none;
+}
+
+#FBStatisticalDate {
+    background-color: white;
+    border: none;
+}
+
+.PieMain {
+    display: flex;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 360px;
+    height: 65px;
+    background-color: #f2f2f2;
+    border-radius: .25rem;
+    margin: 0 0 25px 25px
+}
+
+.PieMain div {
+    flex: 1
+}
+
+.PieMainChild {
+    display: block;
+    margin: 5px 0 5px 0
+}
+
+.PieMainChild~span {
+    display: block;
+}
+
+.PieMainLine {
+    margin-top: 20px;
+    color: #cccccc
+}
+
+#PBvisit {
+    margin: 0 0 0 20px;
+    font-size: 18px;
+    font-weight: 525;
+}
+
+#PBvisitProgress {
+    display: flex;
+    width: 360px;
+    height: 30px;
+}
+
+.PBallProgress {
+    width: 75%;
+    height: 100%;
+    background-color: #ffb366;
+    border-radius: 0.25rem;
+    margin-right: 2px
+}
+
+.PBvisitProgress {
+    width: 25%;
+    height: 100%;
+    background-color: #ff6666;
+    border-radius: 0.25rem;
+    margin-left: 2px
+}
+
+#PBvisitContent {
+    display: flex;
+    text-align: center;
+    letter-spacing: 1px;
+    width: 360px;
+}
+
+#PBvisitContent div {
+    display: block;
+    flex: 1
+}
+
+#PBvisitContent div div {
+    display: block;
+    font-size: 14px;
+    color: #999999;
+}
+
+#PBvisitContent div span {
+    display: block;
+    font-size: 14px;
+    color: #999999;
+}
+
+#PBvisitContent div div span {
+    display: flex;
+    font-size: 14px;
+    color: #999999;
+}
+
+.PBallStyle {
+    width: 5px;
+    height: 8px;
+    margin: 5px 5px 0 5px;
+    background-color: #ffb366;
+    margin-left: 18px
+}
+
+.PBvisitStyle {
+    width: 5px;
+    height: 8px;
+    margin: 5px 5px 0 5px;
+    background-color: #ff6666;
+    margin-left: 32px
+}
+
+#PBsovleDetails {
+    margin: 20px 0 0 20px;
+    font-size: 18px;
+    font-weight: 525;
+}
+
+#CSvisitChart {
+    display: flex;
+}
+
+#CSvisitChart div {
+    flex: 3;
+    margin: 10px 0 0 20px;
+    font-size: 18px;
+    font-weight: 525;
+}
+
+.CSStatisticalDate {
+    flex: 1;
+    margin: 10px 0 20px 0;
+    border: none;
+}
+
+#CSStatisticalDate {
+    background-color: white;
+    border: none;
+}
+
+#PBvisitChart {
+    display: flex;
+}
+
+#PBvisitChart div {
+    flex: 3;
+    margin: 10px 0 0 20px;
+    font-size: 18px;
+    font-weight: 525;
+}
+
+.PBStatisticalDate {
+    flex: 1;
+    margin: 10px 0 20px 0;
+    border: none;
+}
+
+#PBStatisticalDate {
+    background-color: white;
+    border: none;
+}
+
+#table {
+    width: 360px;
+    max-width: 360px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#CSvisitHistogram {
+    text-align: center;
+    width: 360px;
+    height: 240px;
+}
