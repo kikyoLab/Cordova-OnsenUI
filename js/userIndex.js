@@ -1,33 +1,49 @@
 document.addEventListener('init', function (event) {
-    let data = myNavigator.topPage.data
+    /* 检测当前页面是否为 userIndex */
+    if (event.target.matches('#userIndex')) {
+        /* 获取登录 key */
+        let ukey = localStorage.getItem('Userkey');
+        /* 获取今日处理量和累积量 */
+        $.ajax({
+            type: 'POST',
+            url: 'http://work.ecsun.cn:8080/app/api/count.php',
+            data: { "key": ukey, "action": "indexData" },
+            success: function (data) {
+                data = JSON.parse(data)
+                if (data.status == 0) {
+                    localStorage.setItem('todayData', data.info.todayData);
+                    $("#titleProblemNum").html(data.info.todayData)
+                    $("#PBcount").html(data.info.totalData)
+                }
+            }
+        })
 
-    $("#titleProblemNum").html(`03`)
-    $("#titleProblemDate").html(`/ 08:52:45 时长`)
-    $("#userIndexTitle2").html(`今日已处理问题`)
+        $("#userIndexTitle2").html(`今日已处理问题`)
 
-    let ant = document.getElementById('addNewTask')
-    let st = document.getElementById('seeTask')
-    let at = document.getElementById('allTask')
-    let pmfb = document.getElementById('problemFeedBack')
-    let se = document.getElementById('setting')
+        let ant = document.getElementById('addNewTask')
+        let st = document.getElementById('seeTask')
+        let at = document.getElementById('allTask')
+        let pmfb = document.getElementById('problemFeedBack')
+        let se = document.getElementById('setting')
 
-    ant.onclick = function () {
-        console.log('新增日志')
-    }
+        ant.onclick = function () {
+            console.log('新增日志')
+        }
 
-    st.onclick = function () {
-        document.querySelector('#myNavigator').pushPage('html/log/visit.html')
-    }
+        st.onclick = function () {
+            document.querySelector('#myNavigator').pushPage('html/log/visit.html')
+        }
 
-    at.onclick = function () {
-        document.querySelector('#myNavigator').pushPage('html/problem/statistical.html')
-    }
+        at.onclick = function () {
+            document.querySelector('#myNavigator').pushPage('html/problem/statistical.html')
+        }
 
-    pmfb.onclick = function () {
-        document.querySelector('#myNavigator').pushPage('html/problem/feedBack.html')
-    }
+        pmfb.onclick = function () {
+            document.querySelector('#myNavigator').pushPage('html/problem/feedBack.html')
+        }
 
-    se.onclick = function () {
-        document.querySelector('#myNavigator').pushPage('html/userSetting.html')
+        se.onclick = function () {
+            document.querySelector('#myNavigator').pushPage('html/userSetting.html')
+        }
     }
 })

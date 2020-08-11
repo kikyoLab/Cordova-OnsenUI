@@ -24,17 +24,9 @@
     text-align: left;
     margin-top: 20px;
     color: #ffa64d;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 625;
     margin: 0 5px 0 25px;
-}
-
-#titleProblemDate {
-    display: inline-block;
-    text-align: left;
-    color: #ffdab3;
-    font-size: 16px;
-    font-weight: 525;
 }
 
 .featuresCard {
@@ -53,6 +45,10 @@
     margin: 0
 }
 
+.userIndexHader {
+    display: flex;
+}
+
 .userIndexTitle {
     display: block;
     text-align: left;
@@ -62,12 +58,31 @@
 }
 
 .titleLeft {
-    width: 80%;
     display: inline-block;
+    width: 62%;
 }
 
 #taskTotal {
-    display: lnline-block;
+    display: inline-block;
+    width: 120px;
+    height: 36px;
+    background-color: #ffa64d;
+    border-radius: 1.25rem;
+    margin-top: 25px
+}
+
+.taskTotalTitle {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    color: #f2f2f2;
+    font-size: 14px;
+    letter-spacing: 2px
+}
+
+#PBcount {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 24px;
 }
 
 .featuresTitle {

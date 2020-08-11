@@ -66,7 +66,7 @@
 }
 
 #PBvisit {
-    margin: 0 0 0 20px;
+    margin: 20px 0 0 20px;
     font-size: 18px;
     font-weight: 525;
 }
@@ -78,7 +78,7 @@
 }
 
 .PBallProgress {
-    width: 75%;
+    /*     width: 75%; */
     height: 100%;
     background-color: #ffb366;
     border-radius: 0.25rem;
@@ -86,7 +86,7 @@
 }
 
 .PBvisitProgress {
-    width: 25%;
+    /*     width: 25%; */
     height: 100%;
     background-color: #ff6666;
     border-radius: 0.25rem;
@@ -140,13 +140,14 @@
 }
 
 #PBsovleDetails {
-    margin: 20px 0 0 20px;
+    margin: 40px 0 0 20px;
     font-size: 18px;
     font-weight: 525;
 }
 
 #CSvisitChart {
     display: flex;
+    margin-top: 20px
 }
 
 #CSvisitChart div {
@@ -200,4 +201,12 @@
     text-align: center;
     width: 360px;
     height: 240px;
+    margin: -20px 0 0 20px
+}
+
+#PBvisitHistogram {
+    text-align: center;
+    width: 360px;
+    height: 240px;
+    margin: -20px 0 0 20px
 }
