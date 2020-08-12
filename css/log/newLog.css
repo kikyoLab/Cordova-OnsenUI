@@ -1,0 +1,87 @@
+.newLog {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 35px;
+    font-weight: 525;
+    letter-spacing: 1px;
+}
+
+.dropdown-menu li {
+    margin: 0 0 0 5px
+}
+
+.newLog ons-input {
+    width: 320px;
+    line-height: 10px;
+}
+
+.newLogLeft {
+    margin: 10px 0 0 -15px
+}
+
+.newLogTitle {
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    padding-left: 100px;
+}
+
+#newLogForm {
+    width: 360px;
+}
+
+#newLogForm .form-group {
+    width: 180px;
+    padding: 0;
+}
+
+#newLogForm .form-row {
+    max-width: 360px;
+    margin-top: 10px
+}
+
+#newLogCSname0, #newLogPBfrom0, #newLogPBtype0 {
+    border-right: none;
+}
+
+#newLogCSnameIcon, #newLogPBfromIcon, #newLogPBtypeIcon {
+    background-color: white;
+    border-left: none;
+}
+
+.newLogCSname2, .newLogPBfrom2, .newLogPBtype2 {
+    width: 360px;
+    height: 140px;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    text-align: center;
+}
+
+#newLogCSname2, #newLogPBfrom2, #newLogPBtype2 {
+    width: 340px;
+    margin: 0 0 0 8px;
+    border-radius: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.newLogCSname2Text, .newLogPBfrom2Text, .newLogPBtype2Text {
+    display: block;
+    font-size: 14px;
+    color: #ced4da;
+    margin: 10px 0 10px 0
+}
+
+.newLogCSname2Btn, .newLogCSname2Btn:active, .newLogCSname2Btn:focus, .newLogPBfrom2Btn, .newLogPBfrom2Btn:active, .newLogPBfrom2Btn:focus, .newLogPBtype2Btn, .newLogPBtype2Btn:active, .newLogPBtype2Btn:focus {
+    width: 340px;
+    height: 40px;
+    font-weight: 525;
+    background-color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #ff6666;
+    color: #ff6666;
+    font-size: 18px
+}

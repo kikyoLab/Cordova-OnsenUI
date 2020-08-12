@@ -1,0 +1,118 @@
+<ons-page id='newLog'>
+    <div class='newLog'>
+        <div class="newLogLeft">
+            <ons-back-button class='newLogLeftbtn'></ons-back-button>
+            <span class='newLogTitle'>新建日志</span>
+        </div>
+        <form id='newLogForm'>
+            <!-- 客户名称 -->
+            <div class="form-row">
+                <label for="newLogCSname"><span style='color:red'>* </span>客户名称</label>
+                <!-- 文本输入框 -->
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="newLogCSname0" style='display:block'>
+                    <div class="input-group-prepend">
+                        <div id='newLogCSnameIcon' class="input-group-text" style='display:block'>
+                            <img src="icon/qc.png" width="20px" height="20px">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文本数据下拉框 -->
+                <div class="input-group mb-2">
+                    <select id="newLogCSname1" class="form-control" style='display:none'></select>
+                </div>
+
+                <!-- 文本数据新增 -->
+                <div class="input-group mb-2">
+                    <div class='newLogCSname2' style='display:none'>
+                        <input type="text" class="form-control" id="newLogCSname2">
+                        <span class='newLogCSname2Text'>未搜索到相关超市名称, 点击新增添加</span>
+                        <button id='addSup' type="button" class="btn btn-outline-danger newLogCSname2Btn">
+                            + 新增
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 客户姓名 电话 QQ -->
+            <div class="form-row">
+                <label for="newLogCSxm">客户姓名</label>
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="newLogCSxm">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3" style="padding-right:5px ;">
+                    <label for="newLogCStel">客户电话</label>
+                    <input type="text" class="form-control" id="newLogCStel">
+                </div>
+                <div class="form-group col-md-3" style="padding-left:5px ;">
+                    <label for="newLogCSqq">客户QQ</label>
+                    <input type="text" class="form-control" id="newLogCSqq">
+                </div>
+            </div>
+
+            <!-- 问题来源 -->
+            <div class="form-row">
+                <label for="newLogPBfrom"><span style='color:red'>* </span>问题来源</label>
+                <!-- 文本输入框 -->
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="newLogPBfrom0" style='display:block'>
+                    <div class="input-group-prepend">
+                        <div id='newLogPBfromIcon' class="input-group-text" style='display:block'>
+                            <img src="icon/qc.png" width="20px" height="20px">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文本数据下拉框 -->
+                <div class="input-group mb-2">
+                    <select id="newLogPBfrom1" class="form-control" style='display:none'></select>
+                </div>
+
+                <!-- 文本数据新增 -->
+                <div class="input-group mb-2">
+                    <div class='newLogPBfrom2' style='display:none'>
+                        <input type="text" class="form-control" id="newLogPBfrom2">
+                        <span class='newLogPBfrom2Text'>未搜索到相关问题来源, 点击新增添加</span>
+                        <button id='addPBfrom' type="button" class="btn btn-outline-danger newLogPBfrom2Btn">
+                            + 新增
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 问题类型 -->
+            <div class="form-row">
+                <label for="newLogPBtype"><span style='color:red'>* </span>问题类型</label>
+                <!-- 文本输入框 -->
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="newLogPBtype0" style='display:block'>
+                    <div class="input-group-prepend">
+                        <div id='newLogPBtypeIcon' class="input-group-text" style='display:block'>
+                            <img src="icon/qc.png" width="20px" height="20px">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文本数据下拉框 -->
+                <div class="input-group mb-2">
+                    <select id="newLogPBtype1" class="form-control" style='display:none'></select>
+                </div>
+
+                <!-- 文本数据新增 -->
+                <div class="input-group mb-2">
+                    <div class='newLogPBtype2' style='display:none'>
+                        <input type="text" class="form-control" id="newLogPBtype2">
+                        <span class='newLogPBtype2Text'>未搜索到相关问题来源, 点击新增添加</span>
+                        <button id='addPBtype' type="button" class="btn btn-outline-danger newLogPBtype2Btn">
+                            + 新增
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</ons-page>

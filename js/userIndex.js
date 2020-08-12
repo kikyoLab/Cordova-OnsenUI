@@ -27,11 +27,11 @@ document.addEventListener('init', function (event) {
         let se = document.getElementById('setting')
 
         ant.onclick = function () {
-            console.log('新增日志')
+            document.querySelector('#myNavigator').pushPage('html/log/newLog.html')
         }
 
         st.onclick = function () {
-            document.querySelector('#myNavigator').pushPage('html/log/visit.html')
+            document.querySelector('#myNavigator').pushPage('html/log/logVisitDetail.html')
         }
 
         at.onclick = function () {

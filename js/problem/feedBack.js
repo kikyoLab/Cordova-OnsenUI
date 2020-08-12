@@ -22,7 +22,7 @@ document.addEventListener('init', function (event) {
             return result
         })()
 
-        if (!fb.info[0]) return console.error('问题反馈接口故障')
+        if (!fb) return console.error('问题反馈接口故障')
 
         console.log(fb.info[0])
 
@@ -41,6 +41,7 @@ document.addEventListener('init', function (event) {
                     <span class='shopId'>
                     ${fb.info[i].sn}
                     </span>
+                    
                 </div>
             </ons-card>
             `)
