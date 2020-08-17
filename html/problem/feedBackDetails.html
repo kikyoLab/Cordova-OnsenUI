@@ -56,4 +56,26 @@
     <div class='FBSaveSet'>
         <ons-button id='FBSave' modifier="large">确 定</ons-button>
     </div>
+
+    <!-- 问题反馈成功 -->
+    <ons-alert-dialog id="pbfbSuccess" modifier="rowfooter">
+        <div class="alert-dialog-title">提示</div>
+        <div id='success' class="alert-dialog-content">
+            问题反馈成功
+        </div>
+        <div class="alert-dialog-footer">
+            <ons-alert-dialog-button id='pbfbSuccessBtn'>确定</ons-alert-dialog-button>
+        </div>
+    </ons-alert-dialog>
+
+    <!-- 反馈接口故障 -->
+    <ons-alert-dialog id="pbfbBad" modifier="rowfooter">
+        <div class="alert-dialog-title">提示</div>
+        <div id='success' class="alert-dialog-content">
+            问题反馈接口故障
+        </div>
+        <div class="alert-dialog-footer">
+            <ons-alert-dialog-button id='pbfbBadBtn'>确定</ons-alert-dialog-button>
+        </div>
+    </ons-alert-dialog>
 </ons-page>

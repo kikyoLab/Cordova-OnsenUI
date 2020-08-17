@@ -3,6 +3,10 @@ document.addEventListener('init', function (event) {
     if (event.target.matches('#feedBackDetails')) {
         let data = myNavigator.topPage.data
         let ukey = localStorage.getItem('Userkey');
+        let pbfbSuccess = document.getElementById('pbfbSuccess')
+        let pbfbSuccessBtn = document.getElementById('pbfbSuccessBtn')
+        let pbfbBad = document.getElementById('pbfbBad')
+        let pbfbBadBtn = document.getElementById('pbfbBadBtn')
 
         /* title */
         $("#csName").html(data.sup)
@@ -35,11 +39,21 @@ document.addEventListener('init', function (event) {
                 async: false,
                 success: function (data) {
                     data = JSON.parse(data)
-                    if (data.status == 0) {
-                        console.log(data.info)
+                    if (data.status == 0 && data.info == "成功") {
+                        pbfbSuccess.show()
+                    } else {
+                        pbfbBad.show()
                     }
                 }
             })
+        }
+
+        pbfbSuccessBtn.onclick = function () {
+            document.querySelector('#myNavigator').popPage()
+        }
+
+        pbfbBadBtn.onclick = function () {
+            location.reload()
         }
     }
 })

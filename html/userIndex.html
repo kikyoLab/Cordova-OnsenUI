@@ -50,4 +50,15 @@
             <div class='cardText2'>修改系统登陆密码</div>
         </ons-card>
     </div>
+
+    <!-- 主页提示框 -->
+    <ons-alert-dialog id="userIndexContent" modifier="rowfooter">
+        <div class="alert-dialog-title">错误</div>
+        <div id='error' class="alert-dialog-content">
+            主页数据获取接口错误,请重试
+        </div>
+        <div class="alert-dialog-footer">
+            <ons-alert-dialog-button id='userIndexContentBtn'>确定</ons-alert-dialog-button>
+        </div>
+    </ons-alert-dialog>
 </ons-page>

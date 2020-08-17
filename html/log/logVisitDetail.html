@@ -1,4 +1,4 @@
-<ons-page id='visit'>
+<ons-page id='logVisitDetail'>
     <div class='visit'>
         <div class="visitLeft">
             <ons-back-button class='visitLeft'></ons-back-button>
@@ -41,14 +41,14 @@
             <div id='visitHideContent'>
                 <div class="form-row">
                     <div class="form-group col-md-3" style="padding-right:5px ;">
-                        <label for="visitStart"><span style='color:red'>* </span>开始时间</label>
-                        <input type="text" class="form-control datetimepicker-input" id="datetimepickerStart"
-                            data-toggle="datetimepicker" data-target="#datetimepickerStart" />
+                        <label for="logVisitStart"><span style='color:red'>* </span>开始时间</label>
+                        <input type="text" class="form-control datetimepicker-input" id="logVisitDateStart"
+                            data-toggle="datetimepicker" data-target="#logVisitDateStart" />
                     </div>
                     <div class="form-group col-md-3" style="padding-left:5px ;">
-                        <label for="visitEnd"><span style='color:red'>* </span>结束时间</label>
-                        <input type="text" class="form-control datetimepicker-input" id="datetimepickerEnd"
-                            data-toggle="datetimepicker" data-target="#datetimepickerEnd" />
+                        <label for="logVisitEnd"><span style='color:red'>* </span>结束时间</label>
+                        <input type="text" class="form-control datetimepicker-input" id="logVisitDateEnd"
+                            data-toggle="datetimepicker" data-target="#logVisitDateEnd" />
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@
         </div>
 
         <div class="form-row" style='margin-top:20px'>
-            <label for="visitCsStatus">客服服务态度</label>
+            <label for="visitCsStatus">客户服务态度</label>
             <select id="visitCsStatus" class="form-control">
                 <option>满意</option>
                 <option>一般</option>
@@ -120,5 +120,27 @@
         </div>
 
         <ons-button id='visitSave' modifier="large">保 存</ons-button>
+
+        <!-- 回访失败 -->
+        <ons-alert-dialog id="logVisitBad" modifier="rowfooter">
+            <div class="alert-dialog-title">日志回访</div>
+            <div id='success' class="alert-dialog-content">
+                日志回访失败,请重试
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button id='logVisitBadBtn'>确定</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+
+        <!-- 回访成功 -->
+        <ons-alert-dialog id="logVisitSuccess" modifier="rowfooter">
+            <div class="alert-dialog-title">日志回访</div>
+            <div id='success' class="alert-dialog-content">
+                日志回访成功
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button id='logVisitSuccessBtn'>确定</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
     </div>
 </ons-page>

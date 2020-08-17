@@ -3,6 +3,8 @@ document.addEventListener('init', function (event) {
     if (event.target.matches('#userIndex')) {
         /* 获取登录 key */
         let ukey = localStorage.getItem('Userkey');
+        let userIndexContent = document.getElementById('userIndexContent')
+        let userIndexContentBtn = document.getElementById('userIndexContentBtn')
         /* 获取今日处理量和累积量 */
         $.ajax({
             type: 'POST',
@@ -14,9 +16,15 @@ document.addEventListener('init', function (event) {
                     localStorage.setItem('todayData', data.info.todayData);
                     $("#titleProblemNum").html(data.info.todayData)
                     $("#PBcount").html(data.info.totalData)
+                } else {
+                    userIndexContent.show()
                 }
             }
         })
+
+        userIndexContentBtn.onclick = function () {
+            location.reload()
+        }
 
         $("#userIndexTitle2").html(`今日已处理问题`)
 
@@ -31,7 +39,7 @@ document.addEventListener('init', function (event) {
         }
 
         st.onclick = function () {
-            document.querySelector('#myNavigator').pushPage('html/log/logVisitDetail.html')
+            document.querySelector('#myNavigator').pushPage('html/log/logList.html')
         }
 
         at.onclick = function () {

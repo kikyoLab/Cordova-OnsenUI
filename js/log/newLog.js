@@ -3,6 +3,23 @@ document.addEventListener('init', function (event) {
     if (event.target.matches('#newLog')) {
         /* 登录 Key */
         let ukey = localStorage.getItem('Userkey');
+        let newLogError = document.getElementById('newLogError')
+        let newLogfileError = document.getElementById('newLogfileError')
+        let newLogSuccess = document.getElementById('newLogSuccess')
+        let newLogContent = document.getElementById('newLogContent')
+
+        let logError = document.getElementById('logError')
+        let fileBad = document.getElementById('fileBad')
+        let logSuccess = document.getElementById('logSuccess')
+        let newLogContentBtn = document.getElementById('newLogContentBtn')
+
+        bsCustomFileInput.init()
+
+        /* Date */
+        $(function () {
+            $('#newLogDateStart').datetimepicker({ format: 'YYYY-MM-DD HH:mm' });
+            $('#newLogDateEnd').datetimepicker({ format: 'YYYY-MM-DD HH:mm' });
+        });
 
         /**
          * 客户名称
@@ -44,7 +61,8 @@ document.addEventListener('init', function (event) {
             timeoutId = setTimeout(function () {
                 let select = $("#newLogCSname1")[0];
                 select.length = 0;
-                let val = $('#newLogCSname0').val()
+                let val = $('#newLogCSname0').val().split('-')[0]
+                console.log(val)
                 $.ajax({
                     type: 'POST',
                     url: 'http://work.ecsun.cn:8080/app/api/index.php',
@@ -63,7 +81,7 @@ document.addEventListener('init', function (event) {
                                 $("#newLogCSname1").append(`<option></option>`)
                                 for (var i = 0; i < len; i++) {
                                     $("#newLogCSname1").append(`
-                                    <option>${newData[i].cusname}${newData[i].cusid}</option>
+                                    <option>${newData[i].cusname}-${newData[i].cusid}</option>
                                     `)
                                 }
                             } else {
@@ -137,7 +155,10 @@ document.addEventListener('init', function (event) {
             PBtimeoutId = setTimeout(function () {
                 let select = $("#newLogPBfrom1")[0];
                 select.length = 0;
-                let val = $('#newLogPBfrom0').val()
+                let val
+                $('#newLogPBfrom0').val().split('-').length == 1 ?
+                    val = $('#newLogPBfrom0').val().split('-')[0] : val = $('#newLogPBfrom0').val().split('-')[1]
+
                 $.ajax({
                     type: 'POST',
                     url: 'http://work.ecsun.cn:8080/app/api/index.php',
@@ -221,7 +242,10 @@ document.addEventListener('init', function (event) {
             PBtypeTimeoutId = setTimeout(function () {
                 let select = $("#newLogPBtype1")[0];
                 select.length = 0;
-                let val = $('#newLogPBtype0').val()
+                let val
+                $('#newLogPBtype0').val().split('-').length == 1 ?
+                    val = $('#newLogPBtype0').val().split('-')[0] : val = $('#newLogPBtype0').val().split('-')[1]
+
                 $.ajax({
                     type: 'POST',
                     url: 'http://work.ecsun.cn:8080/app/api/index.php',
@@ -264,5 +288,166 @@ document.addEventListener('init', function (event) {
             $(".newLogPBtype2").attr('style', 'display:none')
             $("#newLogPBtype0").val(val)
         })
+
+
+        /**
+         * 处理结果
+         * @param SolveemptyBtn清空问题类型
+         * @param addSolve新增问题类型
+        */
+        const SolveemptyBtn = document.getElementById('newLogSolveIcon')
+        const addSolve = document.getElementById('addSolve')
+
+        SolveemptyBtn.onclick = function () {
+            $("#newLogSolve0").val('')
+        }
+
+        addSolve.onclick = function () {
+            let val = $("#newLogSolve2").val()
+            $.ajax({
+                type: 'POST',
+                url: 'http://work.ecsun.cn:8080/app/api/index.php',
+                data: { "key": ukey, "action": "insertInfo", "type": "dresult", "value": val },
+                async: false,
+                success: function (data) {
+                    data = JSON.parse(data)
+                    if (data.status == 0) {
+                        console.log('成功')
+                        $("#newLogSolve0").attr('style', 'display:block')
+                        $("#newLogSolveIcon").attr('style', 'display:block')
+                        $("#newLogSolve1").attr('style', 'display:none')
+                        $(".newLogSolve2").attr('style', 'display:none')
+                        $("#newLogSolve0").val(val)
+                    }
+                }
+            })
+        }
+
+        /* 延时获取文本输入值 */
+        let SolveTimeoutId = 0;
+        $('#newLogSolve0').off('keyup').on('keyup', function (event) {
+            clearTimeout(SolveTimeoutId);
+            SolveTimeoutId = setTimeout(function () {
+                let select = $("#newLogSolve1")[0];
+                select.length = 0;
+                let val
+                $('#newLogSolve0').val().split('-').length == 1 ?
+                    val = $('#newLogSolve0').val().split('-')[0] : val = $('#newLogSolve0').val().split('-')[1]
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://work.ecsun.cn:8080/app/api/index.php',
+                    data: { "key": ukey, "action": "getInfo", "type": "dresult", "value": val },
+                    async: false,
+                    success: function (data) {
+                        data = JSON.parse(data)
+                        if (data.status == 0) {
+                            $("#newLogSolve0").attr('style', 'display:none')
+                            $("#newLogSolveIcon").attr('style', 'display:none')
+                            $("#newLogSolve1").attr('style', 'display:block')
+
+                            newData = data.info
+                            let len = newData.length
+                            if (len && len > 0) {
+                                $("#newLogSolve1").append(`<option></option>`)
+                                for (var i = 0; i < len; i++) {
+                                    $("#newLogSolve1").append(`
+                                  <option>${newData[i].drid}-${newData[i].drname}</option>
+                                  `)
+                                }
+                            } else {
+                                $("#newLogSolve0").attr('style', 'display:none')
+                                $("#newLogSolveIcon").attr('style', 'display:none')
+                                $("#newLogSolve1").attr('style', 'display:none')
+                                $(".newLogSolve2").attr('style', 'display:block')
+                                $("#newLogSolve2").val(val)
+                            }
+                        }
+                    }
+                })
+            }, 1000);
+        });
+
+        document.getElementById('newLogSolve1').addEventListener('change', function () {
+            let val = $("#newLogSolve1").val()
+            $("#newLogSolve0").attr('style', 'display:block')
+            $("#newLogSolveIcon").attr('style', 'display:block')
+            $("#newLogSolve1").attr('style', 'display:none')
+            $(".newLogSolve2").attr('style', 'display:none')
+            $("#newLogSolve0").val(val)
+        })
+
+        /* newLogSave */
+        const newLogSave = document.getElementById('newLogSave')
+        newLogSave.onclick = function () {
+            let sercus = $("#newLogCSname0").val().split('-')[1]
+            let cusname = $("#newLogCSxm").val()
+            let cusph = $("#newLogCStel").val()
+            let cusqq = $("#newLogCSqq").val()
+            let sertype = $("#newLogPBtype0").val().split('-')[0]
+            let sersou = $("#newLogPBfrom0").val().split('-')[0]
+            let serstart = $("#newLogDateStart").val()
+            let serend = $("#newLogDateEnd").val()
+            let serdetail = $("#newLogDetails").html()
+            let file = $("#newLogFile").val()
+            let seresult = $("#newLogSolve0").val().split('-')[0]
+            let serdmark = $("#newLogRemarks").html()
+
+            if (!sercus || !sertype || !sersou || !serstart || !serend || !serdetail || !seresult || !serdmark) {
+                newLogContent.show()
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://work.ecsun.cn:8080/app/api/index.php',
+                    data: {
+                        "key": ukey,
+                        "action": "insertWork",
+                        "type": "insertWork",
+                        "sercus": sercus,
+                        "sertype": sertype,
+                        "sersou": sersou,
+                        "seresult": seresult,
+                        "serdetail": serdetail,
+                        "serstart": serstart,
+                        "serend": serend,
+                        "serdmark": serdmark,
+                        "cusname": cusname,
+                        "cusph": cusph,
+                        "cusqq": cusqq,
+                        "file": file,
+                    },
+                    async: false,
+                    success: function (data) {
+                        data = JSON.parse(data)
+                        if (data.status == 1003 || data.status == 1004) {
+                            newLogfileError.show()
+                            $("#fileError").html(`${data.info}`)
+                        } else if (data.status == 0 && data.info == "成功") {
+                            newLogSuccess.show()
+                        } else {
+                            newLogError.show()
+                            $("#error").html(`${data.info}`)
+                        }
+                    }
+                })
+            }
+
+        }
+
+        logError.onclick = function () {
+            document.querySelector('#myNavigator').popPage()
+        }
+
+        fileBad.onclick = function () {
+            document.querySelector('#myNavigator').popPage()
+        }
+
+        logSuccess.onclick = function () {
+            document.querySelector('#myNavigator').popPage()
+        }
+
+        newLogContentBtn.onclick = function () {
+            newLogContent.hide()
+        }
     }
 })

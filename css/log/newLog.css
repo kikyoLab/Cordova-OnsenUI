@@ -42,16 +42,16 @@
     margin-top: 10px
 }
 
-#newLogCSname0, #newLogPBfrom0, #newLogPBtype0 {
+#newLogCSname0, #newLogPBfrom0, #newLogPBtype0, #newLogSolve0 {
     border-right: none;
 }
 
-#newLogCSnameIcon, #newLogPBfromIcon, #newLogPBtypeIcon {
+#newLogCSnameIcon, #newLogPBfromIcon, #newLogPBtypeIcon, #newLogSolveIcon {
     background-color: white;
     border-left: none;
 }
 
-.newLogCSname2, .newLogPBfrom2, .newLogPBtype2 {
+.newLogCSname2, .newLogPBfrom2, .newLogPBtype2, .newLogSolve2 {
     width: 360px;
     height: 140px;
     border: 1px solid #ced4da;
@@ -59,7 +59,7 @@
     text-align: center;
 }
 
-#newLogCSname2, #newLogPBfrom2, #newLogPBtype2 {
+#newLogCSname2, #newLogPBfrom2, #newLogPBtype2, #newLogSolve2 {
     width: 340px;
     margin: 0 0 0 8px;
     border-radius: 0;
@@ -68,14 +68,14 @@
     border-right: none;
 }
 
-.newLogCSname2Text, .newLogPBfrom2Text, .newLogPBtype2Text {
+.newLogCSname2Text, .newLogPBfrom2Text, .newLogPBtype2Text, .newLogSolve2Text {
     display: block;
     font-size: 14px;
     color: #ced4da;
     margin: 10px 0 10px 0
 }
 
-.newLogCSname2Btn, .newLogCSname2Btn:active, .newLogCSname2Btn:focus, .newLogPBfrom2Btn, .newLogPBfrom2Btn:active, .newLogPBfrom2Btn:focus, .newLogPBtype2Btn, .newLogPBtype2Btn:active, .newLogPBtype2Btn:focus {
+.newLogCSname2Btn, .newLogCSname2Btn:active, .newLogCSname2Btn:focus, .newLogPBfrom2Btn, .newLogPBfrom2Btn:active, .newLogPBfrom2Btn:focus, .newLogPBtype2Btn, .newLogPBtype2Btn:active, .newLogPBtype2Btn:focus, .newLogSolve2Btn, .newLogSolve2Btn:active, .newLogSolve2Btn:focus {
     width: 340px;
     height: 40px;
     font-weight: 525;
@@ -84,4 +84,46 @@
     border: 1px solid #ff6666;
     color: #ff6666;
     font-size: 18px
+}
+
+#newLogDetails {
+    width: 100%;
+    min-height: 80px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+#newLogDetails:empty::before, #newLogRemarks:empty::before {
+    color: lightgrey;
+    content: attr(placeholder);
+    padding: 10px;
+}
+
+#newLogRemarks {
+    width: 100%;
+    min-height: 40px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+#newLogSave {
+    width: 360px;
+    background-color: #FFA101;
+    border-radius: 6px;
+    padding: 0;
+    margin: 40px 0 40px 0
 }

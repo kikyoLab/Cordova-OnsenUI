@@ -1,0 +1,94 @@
+.logListLeft {
+    margin: 20px 0 0 0
+}
+
+.logListTitle {
+    text-align: center;
+    line-height: 10px;
+    font-size: 20px;
+    padding-left: 100px;
+}
+
+.logListSearch {
+    width: 385px;
+    margin: 20px 10px 10px 10px
+}
+
+.logListCard {
+    width: 385px;
+}
+
+.logListDiv {
+    display: inline-flex;
+    overflow: auto;
+}
+
+.listTitle {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 625;
+    letter-spacing: 1px;
+}
+
+.listDate {
+    margin-left: 20px;
+    background-color: #ffcccc;
+    border-radius: 0.25rem;
+    text-align: center;
+}
+
+.listDate span {
+    color: red;
+    font-size: 12px;
+    font-weight: 525;
+    width: 80%;
+    letter-spacing: 1px;
+}
+
+.logListMain {
+    display: flex;
+    margin-top: 10px;
+}
+
+.logListMainLeft {
+    width: 70%;
+}
+
+#logCsId {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 525;
+    color: #000000;
+    flex: 1
+}
+
+#logSolveId {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 525;
+    flex: 1
+}
+
+#logCs {
+    display: inline-block;
+    font-size: 14px;
+    color: #848484;
+    letter-spacing: 1px;
+    flex: 1
+}
+
+#logSolve {
+    display: inline-block;
+    font-size: 14px;
+    color: #848484;
+    letter-spacing: 1px;
+    flex: 1
+}
+
+.logVisitBtn {
+    width: 60px;
+    background-color: #FFA101;
+    border-radius: 6px;
+    padding: 0;
+    margin: 5px 0 0 20px
+}

@@ -106,13 +106,130 @@
                 <div class="input-group mb-2">
                     <div class='newLogPBtype2' style='display:none'>
                         <input type="text" class="form-control" id="newLogPBtype2">
-                        <span class='newLogPBtype2Text'>未搜索到相关问题来源, 点击新增添加</span>
+                        <span class='newLogPBtype2Text'>未搜索到相关问题类型, 点击新增添加</span>
                         <button id='addPBtype' type="button" class="btn btn-outline-danger newLogPBtype2Btn">
                             + 新增
                         </button>
                     </div>
                 </div>
             </div>
+
+            <!-- 起止时间 -->
+            <div class="form-row">
+                <div class="form-group col-md-3" style="padding-right:5px ;">
+                    <label for="newLogStart"><span style='color:red'>* </span>开始时间</label>
+                    <input type="text" class="form-control datetimepicker-input" id="newLogDateStart"
+                        data-toggle="datetimepicker" data-target="#newLogDateStart" />
+                </div>
+                <div class="form-group col-md-3" style="padding-left:5px ;">
+                    <label for="newLogEnd"><span style='color:red'>* </span>结束时间</label>
+                    <input type="text" class="form-control datetimepicker-input" id="newLogDateEnd"
+                        data-toggle="datetimepicker" data-target="#newLogDateEnd" />
+                </div>
+            </div>
+
+            <!-- 问题详情 -->
+            <div class="form-row">
+                <label for="newLogDetails"><span style='color:red'>* </span>问题详情</label>
+                <div class="input-group mb-2">
+                    <div id='newLogDetails' contenteditable="true" placeholder="问题情况描述"></div>
+                </div>
+            </div>
+
+            <!-- 上传附件 -->
+            <div class="form-row">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="newLogFile" multiple>
+                    <label class="custom-file-label" for="newLogFile">上传附件（文件小于3M）</label>
+                </div>
+            </div>
+
+            <!-- 处理结果 -->
+            <div class="form-row">
+                <label for="newLogSolve"><span style='color:red'>* </span>处理结果</label>
+                <!-- 文本输入框 -->
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" id="newLogSolve0" style='display:block'>
+                    <div class="input-group-prepend">
+                        <div id='newLogSolveIcon' class="input-group-text" style='display:block'>
+                            <img src="icon/qc.png" width="20px" height="20px">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 文本数据下拉框 -->
+                <div class="input-group mb-2">
+                    <select id="newLogSolve1" class="form-control" style='display:none'></select>
+                </div>
+
+                <!-- 文本数据新增 -->
+                <div class="input-group mb-2">
+                    <div class='newLogSolve2' style='display:none'>
+                        <input type="text" class="form-control" id="newLogSolve2">
+                        <span class='newLogSolve2Text'>未搜索到相关处理结果, 点击新增添加</span>
+                        <button id='addSolve' type="button" class="btn btn-outline-danger newLogSolve2Btn">
+                            + 新增
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 处理备注 -->
+            <div class="form-row">
+                <label for="newLogRemarks"><span style='color:red'>* </span>处理备注</label>
+                <div class="input-group mb-2">
+                    <div id='newLogRemarks' contenteditable="true" placeholder="备注信息"></div>
+                </div>
+            </div>
         </form>
+
+        <ons-button id='newLogSave' modifier="large">保 存</ons-button>
+
+        <!-- 新增内容提示框 -->
+        <ons-alert-dialog id="newLogContent" modifier="rowfooter">
+            <div class="alert-dialog-title">错误</div>
+            <div id='error' class="alert-dialog-content">
+                请完整填写新增日志相关内容
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button id='newLogContentBtn'>确定</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+
+        <!-- 接口故障提示框 -->
+        <ons-alert-dialog id="newLogError" modifier="rowfooter">
+            <div class="alert-dialog-title">接口故障</div>
+            <div id='error' class="alert-dialog-content">
+                新建日志接口故障,请重新尝试
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button id='logError'>确定</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+
+        <!-- 文件错误提示框 -->
+        <ons-alert-dialog id="newLogfileError" modifier="rowfooter">
+            <div class="alert-dialog-title">文件错误</div>
+            <div id='fileError' class="alert-dialog-content">
+                文件上传错误,请重新尝试
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button id='fileBad'>确定</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+
+        <!-- 新增日志成功提示框 -->
+        <ons-alert-dialog id="newLogSuccess" modifier="rowfooter">
+            <div class="alert-dialog-title">新增日志</div>
+            <div id='success' class="alert-dialog-content">
+                新增日志成功
+            </div>
+            <div class="alert-dialog-footer">
+                <ons-alert-dialog-button id='logSuccess'>确定</ons-alert-dialog-button>
+            </div>
+        </ons-alert-dialog>
+
+
+
     </div>
 </ons-page>

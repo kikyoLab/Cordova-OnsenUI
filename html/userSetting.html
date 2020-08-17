@@ -23,4 +23,26 @@
 
         <ons-button id='pwdSave' modifier="large">确 认</ons-button>
     </div>
+
+    <!-- 密码修改提示框 -->
+    <ons-alert-dialog id="userSettingDialog" modifier="rowfooter">
+        <div class="alert-dialog-title">错误</div>
+        <div id='userSettingerror' class="alert-dialog-content">
+
+        </div>
+        <div class="alert-dialog-footer">
+            <ons-alert-dialog-button id='userSettingDialogBtn'>确定</ons-alert-dialog-button>
+        </div>
+    </ons-alert-dialog>
+
+    <!-- 修改成功提示框 -->
+    <ons-alert-dialog id="userSettingSuccess" modifier="rowfooter">
+        <div class="alert-dialog-title">提示</div>
+        <div class="alert-dialog-content">
+            密码修改成功
+        </div>
+        <div class="alert-dialog-footer">
+            <ons-alert-dialog-button id='userSettingSuccessBtn'>确定</ons-alert-dialog-button>
+        </div>
+    </ons-alert-dialog>
 </ons-page>
